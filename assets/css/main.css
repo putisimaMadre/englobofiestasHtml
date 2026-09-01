@@ -1300,9 +1300,13 @@ section,
   border-radius: 8px; /* Opcional: bordes redondeados */
 }
 
-/* cambio para logo inicial */
 
-/* Fondo azul para toda la página */
+
+
+
+/* ============================================================
+   REVISIÓN GLOBAL: Fondo Azul para Toda la Página
+   ============================================================ */
 body, 
 .index-page, 
 main,
@@ -1310,31 +1314,134 @@ section,
 .header, 
 .footer,
 .light-background {
-  background-color: #0d6efd !important; /* Cambia #0d6efd por el código de azul que prefieras */
+  background-color: #0d6efd !important; /* Azul Bootstrap (ajusta HEX si quieres) */
   color: #ffffff !important;
 }
 
-/* Ajustes para la barra superior */
-#header {
-  background-color: #0b5ed7; /* Azul un poco más oscuro para dar contraste al header */
+/* Títulos y textos generales visibles */
+h1, h2, h3, h4, h5, h6, 
+p, span, a, 
+.sitename, 
+.section-title h2, 
+.section-title p {
+  color: #ffffff !important;
 }
 
-/* Centrado del contenedor principal del header */
+/* ============================================================
+   SOLUCIÓN AL LOGO CENTRADO
+   ============================================================ */
 #header .container-fluid {
   justify-content: center !important;
   position: relative;
+  padding: 10px 0;
 }
 
-/* Estilos para la imagen del logo centrado */
-.logo-centrado {
-  max-height: 60px; /* Ajusta el tamaño deseado del logo */
+/*.logo-centrado-img {
+  max-height: 50px; 
   height: auto;
   display: block;
-  margin: 0 auto;
-}
-/* cambio para logo inicial */
+}*/
 
-/* Permite que la página y el cuerpo se desplacen por completo */
+/* Navegación a la derecha */
+#header .navmenu {
+  position: absolute !important;
+  right: 20px;
+  background-color: transparent !important;
+}
+
+.navmenu a, .navmenu a:focus {
+  color: #ffffff !important;
+}
+
+.navmenu a:hover, .navmenu .active {
+  color: #ffd700 !important; /* Dorado en hover */
+}
+
+/* ============================================================
+   SOLUCIÓN AL HOVER DE IMAGEN EN PORTAFOLIO (CORRECCIÓN PEDIDA)
+   ============================================================ */
+   
+/* Contenedor de la tarjeta azul completa */
+.portfolio-wrap-azul {
+  background-color: #0b5ed7; /* Azul un poco más oscuro para la tarjeta */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
+}
+
+/* Contenedor estricto para imagen + hover (Mismo tamaño que la imagen) */
+.portfolio-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Ajusta la relación de aspecto si tus imágenes varían */
+  overflow: hidden;
+}
+
+/* Imagen que ocupa todo su contenedor */
+.portfolio-content-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Superposición del hover: Solo cubre .portfolio-image-container */
+.portfolio-info-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Capa oscura (mismo tono que en tu imagen) */
+  opacity: 0; /* Oculto por defecto */
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto hover en el contenedor de imagen */
+.portfolio-image-container:hover .portfolio-info-hover {
+  opacity: 1; /* Mostrar la capa oscura en hover */
+}
+
+/* Estilos de Iconos en el Hover */
+.preview-link-azul, .details-link-azul {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 10px;
+  transition: all 0.3s;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.preview-link-azul:hover, .details-link-azul:hover {
+  color: #ffffff;
+}
+
+/* Contenedor de Texto (Debajo de la imagen, con fondo azul) */
+.portfolio-info-text {
+  padding: 15px;
+  text-align: center;
+}
+
+.portfolio-info-text h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff !important;
+}
+
+.portfolio-info-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ============================================================
+   REVISIÓN DE SCROLL: Solución de Altura (Corrección anterior)
+   ============================================================ */
 html, body {
   height: auto !important;
   min-height: 100% !important;
@@ -1342,16 +1449,252 @@ html, body {
   overflow-y: visible !important;
 }
 
-/* Corrige el colapso de altura en el contenedor del portafolio/masonry */
 .isotope-container {
   height: auto !important;
   min-height: min-content !important;
   overflow: visible !important;
 }
 
-/* Evita que los ítems del portafolio queden encimados si Isotope no recalculó */
 .portfolio-item {
   position: relative !important;
   top: auto !important;
   left: auto !important;
+}
+
+/* Ajustes para hacer el logo más grande */
+/*.logo-centrado-img {
+  max-height: 310px !important;
+  height: auto;
+  width: auto;
+  display: block;
+}*/
+
+/* Espaciado del header para acomodar el logo más grande */
+#header {
+  padding: 15px 0 !important;
+}
+
+/* Ocultar el texto del menú completamente si prefieres hacerlo desde CSS */
+/* 
+#navmenu ul {
+  display: none !important;
+}
+*/
+
+/* Oculta la lista de navegación en pantallas de escritorio (computadoras) */
+@media (min-width: 1200px) {
+  #navmenu ul {
+    display: none !important;
+  }
+  
+  /* Asegura que el ícono de hamburguesa esté alineado a la derecha */
+  .mobile-nav-toggle {
+    position: absolute;
+    right: 20px;
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+}
+
+/* Regla para mostrar el menú desplegable únicamente cuando se activa en móvil */
+body.mobile-nav-active #navmenu ul {
+  display: block !important;
+}
+
+/* Asegura que el ícono (hamburguesa o 'X') permanezca visible cuando el menú está abierto */
+body.mobile-nav-active .mobile-nav-toggle {
+  display: block !important;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-size: 32px;
+  color: #271919 !important;
+  cursor: pointer;
+}
+
+/* Fuerza a que el contenedor del menú abierto no oculte el botón de cierre */
+.mobile-nav-toggle {
+  z-index: 9999;
+}
+
+/* Cambia la fuente de todo el sitio a la tipografía redondeada */
+body, 
+h1, h2, h3, h4, h5, h6, 
+p, span, a, li, button,
+.sitename, .navmenu a {
+  font-family: 'Fredoka', cursive, sans-serif !important;
+}
+
+/* Títulos principales (como "Somos la mejor opción...") con el tono amarillo/naranja del logo */
+h1, h2, h3, .section-title h2 {
+  color: #ffcc00 !important; /* Amarillo brillante del logo */
+  font-weight: 600 !important;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave para destacar sobre azul */
+}
+
+/* Subtítulos y textos de tarjetas (como "Inflables", "Barra Snacks") */
+h4, .portfolio-info-text h4 {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+/* Párrafos e información secundaria */
+p, .portfolio-info-text p, .section-title p {
+  color: #ffffff !important;
+  font-weight: 400 !important;
+}
+
+/* Filtros activos del portafolio (Todos, Inflables, Snacks) */
+.portfolio-filters li {
+  font-family: 'Fredoka', cursive, sans-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  color: #ffffff !important;
+}
+
+.portfolio-filters li.filter-active,
+.portfolio-filters li:hover {
+  color: #ffcc00 !important; /* Resaltado amarillo estilo logo */
+  border-bottom: 3px solid #ffcc00 !important;
+}
+
+/*=====================================*/
+
+/* Fondo general con degradado suave y moderno */
+body, 
+.index-page, 
+main,
+section, 
+.header, 
+.footer,
+.light-background {
+  background: linear-gradient(180deg, #f0f8ff 0%, #dbeafe 40%, #bfdbfe 100%) !important;
+  color: #1e293b !important;
+}
+
+/* Sombra y realce para el logo centrado */
+.logo-centrado-img {
+  max-height: 310px !important;
+  height: auto;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.15)); /* Sombra para despegar el logo del fondo */
+}
+
+/* Contrastes de lectura para títulos principales */
+h1, h2, h3, .section-title h2 {
+  color: #0f172a !important; /* Azul muy oscuro/casi negro para máxima lectura */
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+
+/* Párrafos e información general */
+p, .section-title p {
+  color: #334155 !important;
+  font-weight: 400 !important;
+}
+
+/* Tarjetas del portafolio */
+.portfolio-wrap-azul {
+  background-color: #ffffff !important; /* Tarjeta blanca para resaltar la imagen y el texto */
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+}
+
+.portfolio-info-text h4 {
+  color: #1e3a8a !important; /* Azul rey oscuro para los títulos dentro de las tarjetas */
+}
+
+.portfolio-info-text p {
+  color: #64748b !important;
+}
+
+/* Filtros activos del portafolio */
+.portfolio-filters li {
+  color: #334155 !important;
+}
+
+.portfolio-filters li.filter-active,
+.portfolio-filters li:hover {
+  color: #0284c7 !important; /* Azul vibrante */
+  border-bottom: 3px solid #0284c7 !important;
+}
+
+/* COLOR DE LOS DROPDOWN */
+
+/* Color del texto del menú principal */
+.navbar-nav .nav-link {
+  color: #2c3e50 !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Color al pasar el ratón por el menú principal */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #0d6efd !important;
+}
+
+/* Opciones del menú desplegable */
+.navbar .dropdown-menu {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .dropdown-item {
+  color: #333333 !important;
+  font-weight: 500;
+  padding: 10px 20px;
+}
+
+/* Estado hover de las opciones del desplegable */
+.navbar .dropdown-item:hover {
+  background-color: #0d6efd !important;
+  color: #ffffff !important;
+}
+
+/* MENU LATERAL */
+
+/* Menú Lateral Vertical */
+.sidebar-vertical-menu .nav-link {
+  font-weight: 600;
+  color: #2c3e50 !important;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-vertical-menu .nav-link:hover {
+  background-color: #f0f4f8;
+  color: #0d6efd !important;
+}
+
+/* Submenús desplegables integrados */
+.sidebar-vertical-menu .dropdown-menu {
+  border: 1px solid #e2e8f0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.sidebar-vertical-menu .dropdown-item {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #4a5568 !important;
+  padding: 8px 16px;
+}
+
+.sidebar-vertical-menu .dropdown-item:hover {
+  background-color: #0d6efd !important;
+  color: #ffffff !important;
+}
+
+/* Opcional: Despliegue automático al pasar el mouse en computadoras */
+@media (min-width: 992px) {
+  .sidebar-vertical-menu .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
 }
