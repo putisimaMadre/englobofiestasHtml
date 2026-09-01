@@ -1328,6 +1328,7 @@ p, span, a,
 }
 
 /* ============================================================
+   AJUSTE PERSONALIZADO
    SOLUCIÓN AL LOGO CENTRADO
    ============================================================ */
 #header .container-fluid {
@@ -1694,6 +1695,39 @@ p, .section-title p {
 
 /* Opcional: Despliegue automático al pasar el mouse en computadoras */
 @media (min-width: 992px) {
+  .sidebar-vertical-menu .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Posicionamiento relativo del contenedor */
+.sidebar-vertical-menu .dropdown {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  /* Configuración del submenú desplegable a la derecha */
+  .sidebar-vertical-menu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+    margin-left: 10px; /* Distancia entre el menú y el submenú */
+    min-width: 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  /* PUENTE INVISIBLE: Evita que el submenú se cierre al mover el cursor */
+  .sidebar-vertical-menu .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -12px; /* Cubre la brecha hacia la izquierda */
+    width: 12px;
+    height: 100%;
+    background: transparent;
+  }
+
+  /* Mantiene el desplegable visible durante el hover */
   .sidebar-vertical-menu .dropdown:hover > .dropdown-menu {
     display: block;
   }
