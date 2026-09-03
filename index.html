@@ -32,6 +32,27 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /* 1. Aplicar la tipografía divertida a todos los títulos y encabezados */
+    h1, h2, h3, h4, h5, h6, .portfolio-info h3, .sitename, .sidebar-vertical-menu h5 {
+      letter-spacing: 1px;
+    }
+
+    /* 2. Clases de colores brillantes para fiestas */
+    .titulo-rosa {
+      color: #ec4899 !important; /* Rosa brillante */
+    }
+
+    .titulo-verde {
+      color: #22c55e !important; /* Verde brillante */
+    }
+
+    .titulo-anaranjado {
+      color: #cf60058b !important; /* Verde brillante */
+    }
+
+  </style>
+
 </head>
 
 <body class="index-page">
@@ -44,7 +65,7 @@
         <img src="assets/img/enGlobo/logoEnfiestasLogo.png" alt="EnGloboFiestas" class="logo-centrado-img">
       </a>
 
-      <!-- Navegación a la derecha -->
+      <!-- Navegación y Botón Hamburguesa -->
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
@@ -53,8 +74,11 @@
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+      
+      <!-- El botón debe estar fuera o controlado para pantallas pequeñas -->
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
     </div>
   </header>
 
@@ -68,8 +92,8 @@
           <!-- ENCABEZADO Y FILTROS -->
           <div class="row align-items-center mb-4">
             <div class="col-lg-7 portfolio-info">
-              <h3>Somos la mejor opción para tus eventos</h3>
-              <p>Visita una amplia gama de servicios, mobiliario y atracciones para organización de eventos y fiestas</p>
+              <h3 class="titulo-verde">Somos la mejor opción para tus eventos</h3>
+              <p class="titulo-anaranjado">Visita una amplia gama de servicios, mobiliario y atracciones para organización de eventos y fiestas</p>
             </div>
             <div class="col-lg-5 text-center text-lg-end">
               <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
@@ -88,7 +112,7 @@
             <!-- COLUMNA IZQUIERDA: Menú Vertical Lateral -->
             <div class="col-lg-3 order-1">
               <aside class="sidebar-vertical-menu p-3 rounded shadow-sm bg-white sticky-top" style="top: 100px; z-index: 99;">
-                <h5 class="fw-bold mb-3 border-bottom pb-2 text-dark">Categorías</h5>
+                <h5 class="fw-bold mb-3 border-bottom pb-2 titulo-rosa">Categorías</h5>
                 <ul class="nav nav-pills flex-column gap-1">
 
                   <li class="nav-item dropdown">
@@ -96,18 +120,28 @@
                       Renta de Inflables
                     </a>
                     <ul class="dropdown-menu w-100">
-                      <li><a class="dropdown-item" href="portfolio-inflables.html#acuaticos">Toros Mecánicos</a></li>
-                      <li><a class="dropdown-item" href="portfolio-inflables.html#interactivos">Up down</a></li>
-                      <li><a class="dropdown-item" href="portfolio-inflables.html#castillos">Mesa hockey</a></li>
+                      <li><a class="dropdown-item" href="portfolio-inflables.html#acuaticos">Toros mecánicos</a></li>
+                      <li><a class="dropdown-item" href="portfolio-inflables.html#interactivos">UP dawn y/o demoledor</a></li>
+                      <li><a class="dropdown-item" href="portfolio-inflables.html#castillos">Mesa hokye</a></li>
+                      <li><a class="dropdown-item" href="portfolio-inflables.html#castillos">JENGA GIGANTE</a></li>
+                      <li><a class="dropdown-item" href="portfolio-inflables.html#castillos">Magic beans</a></li>
+                      <li><a class="dropdown-item" href="portfolio-inflables.html#castillos">Rally Pista</a></li>
+                      <li><a class="dropdown-item" href="portfolio-inflables.html#castillos">Gotcha hidrogel</a></li><li><a class="dropdown-item" href="portfolio-inflables.html#castillos">Mesa hokye</a></li>
+                      <li><a class="dropdown-item" href="portfolio-inflables.html#castillos">Maquina de espuma </a></li>
+
                     </ul>
                   </li>
 
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                      Lonas
+                      Carpas
                     </a>
                     <ul class="dropdown-menu w-100">
-                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Carpas</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Lonas</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Carpas convensional</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Carpa elegante</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Carpa transparente</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Cortinas</a></li>
                     </ul>
                   </li>
 
@@ -116,7 +150,25 @@
                       Mesas
                     </a>
                     <ul class="dropdown-menu w-100">
-                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Sillas</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Redonda</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Tablón</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Imperial</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">California</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Mesa de Masa pic nic</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Mesa con sombrilla</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Mesa love</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Mesa infantil</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                      Sillas
+                    </a>
+                    <ul class="dropdown-menu w-100">
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Sillas Plegables</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Sillas Tiffany</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Sillas crossback</a></li>
                     </ul>
                   </li>
 
@@ -125,40 +177,42 @@
                       Periqueras
                     </a>
                     <ul class="dropdown-menu w-100">
-                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Salas Lounge</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Periqueras tipo bar</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Periqueras vintage</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Salas lounge</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Sillón para novios y xv años</a></li>
                     </ul>
                   </li>
 
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                      Shows Infantiles
+                      Mas de 40 shows
                     </a>
                     <ul class="dropdown-menu w-100">
-                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Payasos</a></li>
-                    </ul>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                      Camara 360
-                    </a>
-                    <ul class="dropdown-menu w-100">
-                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Cabina Fotográfica</a></li>
-                    </ul>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                      Robot Iluminado
-                    </a>
-                    <ul class="dropdown-menu w-100">
-                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Cabezones</a></li>
-                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Zanqueros</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Shows infantiles</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Payaso</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Animación baby shower</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Pinta caritas</a></li>
                     </ul>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Letras Iluminadas</a>
+                    <a class="nav-link text-dark" href="#">Puesto de Feria</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">Letras y numeros iluminados</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                      Mas de 40 shows
+                    </a>
+                    <ul class="dropdown-menu w-100">
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Shows infantiles</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Payaso</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Animación baby shower</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Pinta caritas</a></li>
+                    </ul>
                   </li>
 
                   <li class="nav-item dropdown">
@@ -171,9 +225,24 @@
                       <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Elotes</a></li>
                       <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Snaks</a></li>
                       <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Maruchan</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Fresas con crema y duraznos</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Mini hotcackes</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Maquina de helados suaves</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Fuente de chocolate</a></li>
                       <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Postres</a></li>
                       <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Bebidas</a></li>
                       <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Mini hotcakes</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                      Barras de Bebidas
+                    </a>
+                    <ul class="dropdown-menu w-100">
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Micheladas</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Cockteleria</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Barra libre</a></li>
                     </ul>
                   </li>
 
@@ -189,16 +258,81 @@
                       <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Carnitas</a></li>
                       <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Barbacoa</a></li>
                       <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Pozole</a></li>
-                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Parrilladas</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Parrillada argentina</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Parrillada mexicana</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Parrilla suiza</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Hamburguesa y hot dogs</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">birria</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Desayunos ejecutivo</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Desayuno americano</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Desayuno buffet</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Caffe brake</a></li>
                     </ul>
                   </li>
 
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                      Desayuno
+                      Vajilla
+                    </a>
+                    <ul class="dropdown-menu w-100">
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Cristalería y plaque</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Plato de barro</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Plato base</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Plato: ondo, medio, trinche, pastelero</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Copas</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Vasos</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Tazas</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Hieleras grandes</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                      Decoraciónes
+                    </a>
+                    <ul class="dropdown-menu w-100">
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Globos</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Telas</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Flores</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Luces</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">Espejo bienvenida</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">Depósitos de cerveza y refrescos</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">Sonido y rockolas</a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                      Batucada y activaciones
                     </a>
                     <ul class="dropdown-menu w-100">
                       <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Caffe brake</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Robot Iluminado</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Cabezones (la máscara, Bad Bunny, Casimiro "banda el mexicano" )</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Zanqueros iluminados</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Zanqueros tradicional</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Maestro de ceremonia</a></li>
+                      
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                      Pistas
+                    </a>
+                    <ul class="dropdown-menu w-100">
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Pista Iluminada</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Pista de Madera</a></li>
+                      <li><a class="dropdown-item" href="portfolio-snacks.html#dulces">Templete</a></li>
                     </ul>
                   </li>
 

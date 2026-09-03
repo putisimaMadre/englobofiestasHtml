@@ -256,7 +256,7 @@ h6 {
   transform: rotate(180deg);
 }
 
-.navmenu .dropdown ul {
+/*.navmenu .dropdown ul {
   position: static;
   display: none;
   z-index: 99;
@@ -264,7 +264,7 @@ h6 {
   margin: 10px 20px;
   box-shadow: none;
   transition: all 0.5s ease-in-out;
-}
+}*/
 
 .navmenu .dropdown>.dropdown-active {
   display: block;
@@ -1731,4 +1731,81 @@ p, .section-title p {
   .sidebar-vertical-menu .dropdown:hover > .dropdown-menu {
     display: block;
   }
+}
+
+/* ==========================================
+   SOLUCIÓN DEFINITIVA PARA EL MENÚ MÓVIL
+   ========================================== */
+
+/* 1. Ocultar el menú de navegación normal en pantallas menores a 1200px */
+@media (max-width: 1199px) {
+  .header .navmenu {
+    display: none !important; /* Oculto por defecto */
+  }
+
+  /* Mostrar únicamente el botón de hamburguesa */
+  .header .mobile-nav-toggle {
+    display: block !important;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 1100;
+    color: #222;
+  }
+}
+
+/* 2. Cuando se hace clic (el body adquiere la clase .mobile-nav-active) */
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active .header .navmenu {
+  display: flex !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(255, 255, 255, 0.98) !important; /* Fondo blanco sólido */
+  z-index: 1050 !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+/* 3. Acomodar los enlaces dentro del menú móvil para que no se amontonen */
+body.mobile-nav-active .header .navmenu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body.mobile-nav-active .header .navmenu ul li a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333 !important;
+}
+
+/* 4. En pantallas grandes (Desktop), asegurar que el menú se vea normal y la hamburguesa desaparezca */
+@media (min-width: 1200px) {
+  .header .navmenu {
+    display: flex !important;
+  }
+  .header .mobile-nav-toggle {
+    display: none !important;
+  }
+}
+
+/* Clases de color personalizadas */
+.texto-rosa {
+  color: #ff3366 !important; /* Rosa brillante */
+}
+
+.texto-verde {
+  color: #28a745 !important; /* Verde brillante */
 }
