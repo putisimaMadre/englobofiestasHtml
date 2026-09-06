@@ -32,6 +32,12 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+  .portfolio-filters li {
+    font-size: 30px !important; /* Puedes cambiar 20px por el tamaño que desees */
+    font-weight: bold;
+  }
+</style>
 
 </head>
 
@@ -78,18 +84,18 @@
           </div>
 
           <div class="row">
-  <div class="col-lg-12 text-center align-items-center">
-    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-      <li data-filter="*" class="filter-active titulo-rosa">Todos</li>
-      <li data-filter=".filter-app" class="titulo-verde">Inflables</li>
-      <li data-filter=".filter-product" class="titulo-anaranjado">Mobiliario</li>
-      <li data-filter=".filter-branding" class="titulo-rosa">Snacks</li>
-      <li data-filter=".filter-books" class="titulo-anaranjado">Alimentos</li>
-      <li data-filter=".filter-books" class="titulo-anaranjado">Espectaculo</li>
-      <li data-filter=".filter-books" class="titulo-anaranjado">Entretenimiento</li>
-    </ul>
-  </div>
-</div>
+            <div class="col-lg-12 text-center align-items-center">
+              <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                <li data-filter="*" class="filter-active titulo-rosa">Todos</li>
+                <li data-filter=".filter-app" class="titulo-verde">Inflables</li>
+                <li data-filter=".filter-product" class="titulo-anaranjado">Mobiliario</li>
+                <li data-filter=".filter-branding" class="titulo-rosa">Snacks</li>
+                <li data-filter=".filter-books" class="titulo-anaranjado">Alimentos</li>
+                <li data-filter=".filter-books" class="titulo-anaranjado">Espectaculo</li>
+                <li data-filter=".filter-books" class="titulo-anaranjado">Entretenimiento</li>
+              </ul>
+            </div>
+          </div>
 
           <!-- ESTRUCTURA EN DOS COLUMNAS -->
           <div class="row gy-4">
@@ -105,7 +111,19 @@
                       Renta de Inflables
                     </a>
                     <ul class="dropdown-menu w-100">
-                      <li><a class="dropdown-item" href="portfolio-inflables.html">Toros mecánicos</a></li>
+                      <!-- Enlace principal que el usuario ve y al que le da clic -->
+                      <li>
+                        <a class="dropdown-item glightbox" href="assets/img/enGlobo/inflables1/i2.jpeg" data-gallery="galeria-toros">
+                          Toros mecánicos
+                        </a>
+                      </li>
+                      <!-- Las otras 2 imágenes ocultas (d-none) pero conectadas a la misma galería -->
+                      <li class="d-none">
+                        <a class="glightbox" href="assets/img/enGlobo/inflables1/i6.jpeg" data-gallery="galeria-toros"></a>
+                      </li>
+                      <!--<li class="d-none">
+                        <a class="glightbox" href="assets/img/enGlobo/inflables1/i6.jpeg" data-gallery="galeria-toros"></a>
+                      </li>-->
                       <li><a class="dropdown-item" href="portfolio-inflables.html">UP dawn y/o demoledor</a></li>
                       <li><a class="dropdown-item" href="portfolio-inflables.html">Mesa hokye</a></li>
                       <li><a class="dropdown-item" href="portfolio-inflables.html">JENGA GIGANTE</a></li>
@@ -333,7 +351,7 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                   <div class="portfolio-wrap-azul">
                     <div class="portfolio-image-container">
-                      <img src="assets/img/enGlobo/inflable3.jpeg" class="img-fluid portfolio-content-img" alt="Inflable">
+                      <img src="assets/img/enGlobo/inflables3/ic1m.png" class="img-fluid portfolio-content-img" alt="Inflable">
                       <a href="portfolio-inflables.html" title="Ver detalles" class="portfolio-info-hover portfolio-link"></a>
                     </div>
                     <div class="portfolio-info-text">
@@ -347,7 +365,7 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                   <div class="portfolio-wrap-azul">
                     <div class="portfolio-image-container">
-                      <img src="assets/img/enGlobo/barraSnacks.jpeg" class="img-fluid portfolio-content-img" alt="Barra de Snacks">
+                      <img src="assets/img/enGlobo/barraSnacks.png" class="img-fluid portfolio-content-img" alt="Barra de Snacks">
                       <a href="portfolio-barraSnacks.html" title="Ver detalles" class="portfolio-info-hover portfolio-link"></a>
                     </div>
                     <div class="portfolio-info-text">
@@ -361,7 +379,7 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                   <div class="portfolio-wrap-azul">
                     <div class="portfolio-image-container">
-                      <img src="assets/img/enGlobo/decoracion2.jpeg" class="img-fluid portfolio-content-img" alt="Decoracion">
+                      <img src="assets/img/enGlobo/decoracion2.png" class="img-fluid portfolio-content-img" alt="Decoracion" style="width: 400px; height: 250px; object-fit: cover;">
                       <a href="portfolio-decoracion.html" title="Ver detalles" class="portfolio-info-hover portfolio-link"></a>
                     </div>
                     <div class="portfolio-info-text">
