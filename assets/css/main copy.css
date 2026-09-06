@@ -1561,9 +1561,7 @@ p, .portfolio-info-text p, .section-title p {
   border-bottom: 3px solid #ffcc00 !important;
 }
 
-/*============================================================*/
-/*=====================AJUSTES FORMATOWEB=====================*/
-/*============================================================*/
+/*=====================================*/
 
 /* Fondo general con degradado suave y moderno */
 body, 
@@ -1707,6 +1705,33 @@ p, .section-title p {
   position: relative;
 }
 
+@media (min-width: 992px) {
+   /*Configuración del submenú desplegable a la derecha */
+  .sidebar-vertical-menu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+    margin-left: 10px;  /*Distancia entre el menú y el submenú */
+    min-width: 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  /* PUENTE INVISIBLE: Evita que el submenú se cierre al mover el cursor */
+  .sidebar-vertical-menu .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -12px; /* Cubre la brecha hacia la izquierda */
+    width: 12px;
+    height: 100%;
+    background: transparent;
+  }
+
+  /* Mantiene el desplegable visible durante el hover */
+  .sidebar-vertical-menu .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
 
 /* ==========================================
    SOLUCIÓN DEFINITIVA PARA EL MENÚ MÓVIL
@@ -1867,38 +1892,3 @@ body.mobile-nav-active .header .navmenu ul li a {
     font-size: 3.5rem !important; /* Puedes subirlo a 4rem o 4.5rem si lo quieres aún más gigante */
     line-height: 1.2 !important;  /* Asegura que si el texto baja a dos líneas no se amontone */
   }
-  
-
-  /* 1. COMPORTAMIENTO PARA COMPUTADORAS (Más pegado al menú padre) */
-.sidebar-vertical-menu .dropdown-menu {
-  position: absolute !important;
-  top: 0 !important;
-  left: 95% !important; /* Reducido de 100% a 95% para acercarlo */
-  margin-left: 2px !important; /* Espacio mínimo de separación */
-  max-height: calc(100vh - 150px) !important;
-  overflow-y: auto !important;
-  padding: 10px 0;
-  box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
-  border-radius: 8px;
-  background-color: #ffffff;
-}
-
-.sidebar-vertical-menu .dropdown-menu .dropdown-item {
-  padding: 8px 20px;
-  white-space: normal;
-}
-
-/* 2. COMPORTAMIENTO EXCLUSIVO PARA MÓVILES (Se mantiene hacia abajo) */
-@media (max-width: 991.98px) {
-  .sidebar-vertical-menu .dropdown-menu {
-    position: static !important;
-    float: none !important;
-    width: 100% !important;
-    margin-top: 5px !important;
-    margin-left: 0 !important;
-    max-height: 300px !important;
-    overflow-y: auto !important;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
-  }
-}
-
